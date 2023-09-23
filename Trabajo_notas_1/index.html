@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos de CCS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styele.css">
+    <title>Formulario de promedio</title>
+    <!--styles de button icon github-->
+    <link rel="stylesheet" href="css/style-icon-github.css">
+    <!--Icon cdn Font Awesone-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">    
+</head>
+<body>
+    <center>
+    <div class="container col-8 my-5 br-2 rounded">
+        <div class="row g-3">
+            
+            <div class="col-8">
+                <div class="card bg-info text-center">
+                    <h5>Calificación de Notas</h5> 
+                </div>
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <label class="form-label" for="firstname">Nombres</label>
+                            <input type="text" id="nombre" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Ingrese nombre del alumno
+                            </div>
+                        </div>
+                        
+                        <div class="col-4 mt-3">
+                            <label class="form-label" for="zip">Nota 1 </label>
+                            <input type="number" id="nota1" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Ingrese la nota 1
+                             </div>
+                        </div>
+                        <div class="col-4 mt-3">
+                            <label class="form-label" for="zip">Nota 2 </label>
+                            <input type="number" id="nota2" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Ingrese la nota 2
+                             </div>
+                        </div>
+                        <div class="col-4 mt-3">
+                            <label class="form-label" for="zip">Nota 3 </label>
+                            <input type="number" id="nota3" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Ingrese la nota 3
+                             </div>
+                        </div>                     
+                     
+                       
+                    </div>
+                    <hr class="mt-5">
+                    <div class="form-check">
+                        <!-- <input type="checkbox" class="form-check-input"> -->
+                        <label class="form-check-label">Haga click en el botón!!</label>
+                    </div>
+                    <hr>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <button  class="btn btn-primary btn-block mb-4" onclick="agregarNotas();">Promediar Nota</button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </div>
+        
+        <hr>
+        <div class="card bg-info text-center">
+            <h6>Resultados</h6> 
+        </div>
+        <div class="car-footer p-2">
+            <!-- <button class="btn-primary" id="grabar">Grabar</button> -->
+            <table class="table table-striped table-bordered mt-3 " >
+                <thead class="text-center font-weight-bold">
+                    <tr class="bg-secondary text-white">
+                        <td>Nombre</td>
+                        <td>Nota 1</td>
+                        <td>Nota 2</td>
+                        <td>Nota 3</td>
+                        <td>Promedio</td>
+                        <td>Observación</td>
+                    </tr>
+                </thead>
+                <tbody id="addtabla">
+                    
+                </tbody>                  
+            </table>
+       </div>
+    </div>  
+</center>
+        
+        <div class="github-icon-container">
+            <a href="https://github.com/juscoder/appweb_calificacion_de_notas" target="_blank"><i class="fab fa-github github-icon"></i></a>
+        </div>
+     <script src="js/promediar.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
+    <!-- Script de bootsatrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- Script de sweet alrt -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html> 

@@ -1,0 +1,9 @@
+body {
+  /* background: url(/image/background.png) 100% 100%; */
+  background-color: rgb(13, 175, 80);
+  background-size: cover;
+}
+
+.container {
+  background: #06a19a;
+}
